@@ -1,0 +1,10 @@
+version: '3'
+services:
+    sphinx:
+        build: ./sphinx/.
+        container_name: sphinx_303
+        image: sphinxsearch
+        ports:
+            - "9312:9312"
+            - "9306:9306"
+        tty: true

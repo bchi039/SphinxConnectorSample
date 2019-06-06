@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.0\SphinxConnectorSample.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="logs\**" />
+    <Compile Remove="SphinxSearch\bin\**" />
+    <Compile Remove="SphinxSearch\data\**" />
+    <Compile Remove="SphinxSearch\log\**" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="logs\**" />
+    <Content Remove="SphinxSearch\bin\**" />
+    <Content Remove="SphinxSearch\data\**" />
+    <Content Remove="SphinxSearch\log\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="logs\**" />
+    <EmbeddedResource Remove="SphinxSearch\bin\**" />
+    <EmbeddedResource Remove="SphinxSearch\data\**" />
+    <EmbeddedResource Remove="SphinxSearch\log\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="logs\**" />
+    <None Remove="SphinxSearch\bin\**" />
+    <None Remove="SphinxSearch\data\**" />
+    <None Remove="SphinxSearch\log\**" />
+    <None Remove="wwwroot\**" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Common.Logging" Version="3.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="SphinxConnector" Version="4.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+
+</Project>
